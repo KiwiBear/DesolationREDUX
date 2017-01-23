@@ -1,0 +1,2 @@
+generateuuid.exe
+pause
