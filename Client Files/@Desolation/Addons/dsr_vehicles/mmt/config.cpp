@@ -27,6 +27,7 @@ class CfgVehicles
 		picture	= "\dsr_vehicles\mmt\data\ui\picture_mmt_ca.paa"; /// just some icon in command bar
 		Icon	= "\dsr_vehicles\mmt\data\ui\icon_mmt_ca.paa"; /// icon in map
 		displayName = "MMT"; /// displayed in Editor
+		editorSubcategory = "BikeSubcategory";
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"\dsr_vehicles\mmt\data\mmt_01_co.paa"};
 		terrainCoef 	= 6.5; 	/// different surface affects this car more, stick to tarmac

@@ -23,7 +23,7 @@ class CfgVehicles
 		weapons[] = {"MiniCarHorn"};
 		magazines[] = {};
 		//vehicleClass = "Air";
-		model = "\dsr_vehicles\suv\suv.p3d";
+		model = "\dsr_vehicles\suv\dsr_suv.p3d";
 		picture = "\dsr_vehicles\suv\data\ui\picture_suv_ca.paa";
 		icon="\dsr_vehicles\suv\data\ui\icon_suv_ca.paa";
 		author = "ANixon - DesolationRedux.com";
@@ -88,8 +88,6 @@ class CfgVehicles
 		changeGearMinEffectivity[] = {1,0.15,1,1,1,1,1,1};
 		switchTime = 0.31;
 		latency = 1.5;
-		canfloat = 0;
-		waterResistance = 1;
 		//antiRollbarForceCoef = 1;
 		//antiRollbarForceLimit = 10;
 		//antiRollbarSpeedMin = 10;
@@ -112,6 +110,8 @@ class CfgVehicles
 		crewCrashProtection = 0.25;
 		armor = 35; 	/// just some protection against missiles, collisions and explosions
 		mapSize = 20;
+		maxFordingDepth = 0.3;
+		WaterLeakiness = 10;
 
 		class Turrets{}; /// doesn't have any gunner nor commander
 		class TransportItems{};
