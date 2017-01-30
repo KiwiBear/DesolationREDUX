@@ -12,7 +12,11 @@
 params["_sourcesinfo"];
 // each bleed source / level increases loss by 5 per second
 
+_iconAnim = 0;
+
 if(count(_sourcesinfo) > 0) then {
+	_iconAnim = 1;
+	
 	_numLevels = 0;
 
 	{
@@ -32,7 +36,7 @@ if(DS_var_Blood != 27500) then {
 		
 		DS_var_bEffectSaturation = 1;
 	};
-	
+	if(_iconAnim == 0) then {_iconAnim = 2;};
 	
 	_newSaturation = DS_var_Blood / 27500;
 	if(DS_var_bEffectSaturation != _newSaturation) then {
@@ -44,6 +48,32 @@ if(DS_var_Blood != 27500) then {
 	if(!isNil "DS_var_bloodEffect") then {
 		ppEffectDestroy DS_var_bloodEffect;
 		DS_var_bloodEffect = nil;
+	};
+};
+
+if(_iconAnim == 0) then {
+	//-- hide blood icon
+	_ctrl = uiNamespace getVariable ["BLOOD_ICON",controlNull];
+	if(!isNull _ctrl) then {
+		if (ctrlShown _ctrl) then {
+			_ctrl ctrlShow false;
+		};
+	};
+};
+if(_iconAnim == 1) then {
+	//flash blood icon
+	_ctrl = uiNamespace getVariable ["BLOOD_ICON",controlNull];
+	if(!isNull _ctrl) then {
+		_ctrl ctrlShow !(ctrlShown _ctrl);
+	};
+};
+if(_iconAnim == 2) then {
+	//-- show blood icon
+	_ctrl = uiNamespace getVariable ["BLOOD_ICON",controlNull];
+	if(!isNull _ctrl) then {
+		if (!ctrlShown _ctrl) then {
+			_ctrl ctrlShow true;
+		};
 	};
 };
 

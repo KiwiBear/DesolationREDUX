@@ -46,6 +46,11 @@ class Action_FillHydrocarbon { // fill propane or butane
 };
 
 class CfgMagazines {
+	//--- crafting stuff ben made me address
+	
+	
+	
+	
 	//--- food
 	class dsr_item_beans {
 		class Actions {

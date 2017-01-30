@@ -16,6 +16,7 @@ if(!_enabled) exitWith {diag_log "DESOLATION IS NOT ENABLED, THE PLUGIN WILL NOT
 0 fadeSound 0;
 0 fadeMusic 0;
 
+call ds_fnc_initHud;
 call ds_fnc_initInvHandler;
 [] spawn DS_fnc_initBuilding;
 

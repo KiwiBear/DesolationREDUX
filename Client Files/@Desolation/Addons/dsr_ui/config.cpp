@@ -202,7 +202,76 @@ class RscActivePicture;
 class RscButtonMenuMain;
 class RscControlsGroup;
 
+
+class DsHudIcon {
+	type=0;
+	font="TahomaB";
+	style=48;
+	shadow = 0;
+	colorBackground[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
+	tooltipColorText[] = {1,1,1,1};
+	tooltipColorBox[] = {1,1,1,1};
+	tooltipColorShade[] = {0,0,0,0.65};
+	tooltip = "";
+	sizeEx = 0.1;
+	y = "safeZoneY + safeZoneH - (pixelH*118)";
+	w = "pixelW*116";
+	h = "pixelH*116";
+};
+
 class RscTitles {
+	class DS_HUD
+	{
+		onLoad = "uinamespace setVariable ['ds_hud_display',_this select 0];";
+		idd = 10110;
+		fadein = 0;
+		fadeout = 2;
+		name="DS_HUD";
+		duration = 1e10;
+		class Controls {
+			class BloodIcon: DsHudIcon
+			{
+				idc = 10;
+				
+				text = "dsr_ui\Assets\hud\blood.paa";
+				
+				x = "safezoneX + safeZoneW - (pixelW*100) - (0*(pixelW*70))";
+			};
+			class ThirstIcon: DsHudIcon
+			{
+				idc = 11;
+				
+				text = "dsr_ui\Assets\hud\drink.paa";
+				
+				x = "safezoneX + safeZoneW - (pixelW*100) - (1*(pixelW*70))";
+			};
+			class HungerIcon: DsHudIcon
+			{
+				idc = 12;
+				
+				text = "dsr_ui\Assets\hud\food.paa";
+				
+				x = "safezoneX + safeZoneW - (pixelW*100) - (2*(pixelW*70))";
+			};
+			class BoneIcon: DsHudIcon
+			{
+				idc = 13;
+				
+				text = "dsr_ui\Assets\hud\bone.paa";
+				
+				x = "safezoneX + safeZoneW - (pixelW*100) - (3*(pixelW*70))";
+			};
+			class InfectedIcon: DsHudIcon
+			{
+				idc = 14;
+				
+				text = "dsr_ui\Assets\hud\infected.paa";
+				
+				x = "safezoneX + safeZoneW - (pixelW*100) - (4*(pixelW*70))";
+			};
+		};
+	};
 	class transition_type1
 	{
 		idd = -1;

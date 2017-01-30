@@ -26,3 +26,22 @@ call ds_fnc_onHungerTick;
 call ds_fnc_onThirstTick;
 call ds_fnc_onEffectTick;
 call ds_fnc_onUpdateTick;
+
+
+if((player getHitPointDamage 'HitLegs') > 0) then {
+	//-- show bone icon
+	_ctrl = uiNamespace getVariable ["BONE_ICON",controlNull];
+	if(!isNull _ctrl) then {
+		if (!ctrlShown _ctrl) then {
+			_ctrl ctrlShow true;
+		};
+	};
+} else {
+	//-- hide bone icon
+	_ctrl = uiNamespace getVariable ["BONE_ICON",controlNull];
+	if(!isNull _ctrl) then {
+		if (ctrlShown _ctrl) then {
+			_ctrl ctrlShow false;
+		};
+	};
+};

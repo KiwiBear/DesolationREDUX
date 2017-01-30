@@ -10,8 +10,17 @@
  */
 
 //runs every second
-
+disableserialization;
 if(DS_var_InfectionDOT > 0) then {
+
+	//-- show infection icon
+	_ctrl = uiNamespace getVariable ["INFECTION_ICON",controlNull];
+	if(!isNull _ctrl) then {
+		if (!ctrlShown _ctrl) then {
+			_ctrl ctrlShow true;
+		};
+	};
+
 	//--- create the ppeffect
 	if (isNil "DS_var_InfectionEffect") then
 	{
@@ -76,6 +85,14 @@ if(DS_var_InfectionDOT > 0) then {
 } else {
 	if !(isNil "DS_var_InfectionEffect") then
 	{
+		//-- hide infection icon
+		_ctrl = uiNamespace getVariable ["INFECTION_ICON",controlNull];
+		if(!isNull _ctrl) then {
+			if (ctrlShown _ctrl) then {
+				_ctrl ctrlShow false;
+			};
+		};
+		
 		ppEffectDestroy DS_var_InfectionEffect;
 		DS_var_InfectionEffect = nil;
 	};

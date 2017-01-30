@@ -163,6 +163,7 @@ class CfgFunctions
 			file = "Desolation\Client\Interface";
 			isclient = 1;
 			class onEscape {};
+			class initHud {};
 		};
 		class Client {
 			file = "Desolation\Client";
@@ -6697,16 +6698,132 @@ class CfgBuildables {
 		};
 	};
 };
-class CfgCraftables {
-	class CraftableItem {
-		parts[] = {
-			{"Item",2},
-			{"Different Item",1}
+/*class CfgCraftables {
+	class Materials {
+		condition = "true"; 
+		preview = "\SM_Zombz\Survivors_icon.paa"; 
+		name = "Materials"; 
+		class Craftables {
+			class Lumber {
+				input[] = {
+					{"dsr_item_logs",1},
+					{"dsr_item_saw",1}
+				};
+				output[] = {
+					{"dsr_item_lumber",1},
+					{"dsr_item_saw",1}
+				};
+				
+				needsWorkbench = 0;
+				needsFire = 0;
+				needsAnvil = 0;
+				
+				name = "Lumber";
+				description = "General Purpose Lumber.";
+				preview = "\dsr_ui\Assets\houseLvl1Preview_ca.paa";
+				condition = "true";
+			};
+			class Lumber {
+				input[] = {
+					{"dsr_item_lumber",4},
+					{"dsr_item_saw",1},
+					{"dsr_item_toolbox",1}
+				};
+				output[] = {
+					{"dsr_item_plywood",1},
+					{"dsr_item_saw",1},
+					{"dsr_item_toolbox",1}
+				};
+				
+				needsWorkbench = 1;
+				needsFire = 0;
+				needsAnvil = 0;
+				
+				name = "Lumber";
+				description = "General Purpose Lumber.";
+				preview = "\dsr_ui\Assets\houseLvl1Preview_ca.paa";
+				condition = "true";
+			};
 		};
-		name = "Some Crafted Item";
-		item = "DSR_Item_That_Is_Craftable";
-		description = "Sick moves";
-		condition = "true";
 	};
-};
+	class Tools {
+		condition = "true"; 
+		preview = "\SM_Zombz\Survivors_icon.paa"; 
+		name = "Tools"; 
+		class Craftables {
+			class FishingRod {
+				input[] = {
+					{"dsr_item_fishingrod_broken",1},
+					{"dsr_item_ducttape",1}
+				};
+				output[] = {
+					{"dsr_fishingrod_fixed",1}
+				};
+				
+				needsWorkbench = 0;
+				needsFire = 0;
+				needsAnvil = 0;
+				
+				name = "Fishing Rod";
+				description = "Great for catching small fishies.";
+				preview = "\dsr_ui\Assets\houseLvl1Preview_ca.paa";
+				condition = "true";
+			};
+		};
+	};
+	class Food {
+		condition = "true"; 
+		preview = "\SM_Zombz\Survivors_icon.paa";
+		name = "Food"; 
+		class Craftables {
+			
+		};
+	};
+	class Gear {
+		condition = "false";
+		preview = "\SM_Zombz\Survivors_icon.paa"; 
+		name = "Gear";
+		class Craftables {
+			
+		};
+	};
+	class Weapons {
+		condition = "false"; 
+		preview = "\SM_Zombz\Survivors_icon.paa";
+		name = "Weapons"; 
+		class Craftables {
+			
+		};
+	};
+	class Medical {
+		condition = "false"; 
+		preview = "\SM_Zombz\Survivors_icon.paa";
+		name = "Medical"; 
+		class Craftables {
+			class Lumber {
+				input[] = {
+					{"dsr_item_weapons_parts",1},
+					{"dsr_item_hardware",2},
+					{"dsr_items_scrapmetal",2},
+					{"dsr_item_hammer",1},
+					{"dsr_item_spanner_wrench",1}
+				};
+				output[] = {
+					{"dsr_smg_sten",1},
+					{"dsr_item_hammer",1},
+					{"dsr_item_spanner_wrench",1}
+				};
+				
+				needsWorkbench = 1;
+				needsFire = 1;
+				needsAnvil = 1;
+				
+				name = "Lumber";
+				description = "General Purpose Lumber.";
+				preview = "\dsr_ui\Assets\houseLvl1Preview_ca.paa";
+				condition = "true";
+			};
+		};
+	};
+};*/
 

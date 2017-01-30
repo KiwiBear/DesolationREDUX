@@ -177,7 +177,9 @@ if(_savedLoot isEqualTo []) then {
 		_items = _loot select 2;
 		_weapons = _loot select 3;
 		_backpacks = _loot select 4;
-
+		
+		
+		
 		{
 			if(count(_x) > 1) then {
 				_container addMagazineAmmoCargo [_x select 0, 1, _x select 1];
