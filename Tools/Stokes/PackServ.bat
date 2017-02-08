@@ -1,7 +1,7 @@
 @echo off
 set "mikeroTools=C:\Program Files (x86)\Mikero\DePboTools\bin"
-set "modSource=F:\Git\DSR\Server Files\@DesolationServer\Addons"
-set "deploy=F:\Git\DSR\Server Files\@DesolationServer\Addons"
+set "modSource=F:\Git\DSR_Server\@DesolationServer\Addons"
+set "deploy=F:\Git\DSR_Server\@DesolationServer\Addons"
 set "packData=-p -x "thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.bat,*.png,*.log,*.pew,*.tga" -z "*.wss,*.ogg,*.jpg,*.wav,*.fsm,*.pac,*.paa""
 "%mikeroTools%\MakePbo.exe" -@=AdminTools %packData% "%modSource%\AdminTools" "%deploy%\AdminTools.pbo"
 "%mikeroTools%\MakePbo.exe" -@=DesoDB %packData% "%modSource%\DesoDB" "%deploy%\DesoDB.pbo"

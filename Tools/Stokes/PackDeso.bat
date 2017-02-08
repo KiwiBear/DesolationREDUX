@@ -3,7 +3,7 @@ taskkill /f /im arma3.exe
 taskkill /f /im arma3server.exe
 timeout /t 1
 set "mikeroTools=C:\Program Files (x86)\Mikero\DePboTools\bin"
-set "modSource=F:\Git\DSR\Client Files\@Desolation\Addons"
+set "modSource=F:\Git\DSR_Client\@Desolation\Addons"
 set "deploy=F:\Mods\Arma_3\@Desolation"
 del /s /q "P:\dsr_actions"
 del /s /q "P:\dsr_code"
